@@ -1,0 +1,19 @@
+---
+import SecondaryIntro from '../components/SecondaryIntro.astro';
+import FAQ from '../components/FAQ.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const introTitle = "Contact Mel";
+const introSubtitle = "Let's talk";
+
+const secondaryIntroHeading = "Let’s talk! Fill out the form below to get started.";
+const secondaryIntroSubheading = [];
+const secondaryIntroBodyText = [];
+---
+<BaseLayout introTitle={introTitle} introSubtitle={introSubtitle}>
+  <SecondaryIntro
+    secondaryIntroHeading={secondaryIntroHeading}
+    secondaryIntroSubheading={secondaryIntroSubheading}
+    secondaryIntroBodyText={secondaryIntroBodyText}
+  />
+</BaseLayout>
