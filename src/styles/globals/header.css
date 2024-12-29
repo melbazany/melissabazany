@@ -1,0 +1,19 @@
+.site-header {}
+
+.site-header__navigation {}
+
+.site-header__navigation-list {
+    @apply flex;
+    @apply flex-wrap;
+    @apply gap-2;
+}
+
+.site-header__navigation-list-item {
+}
+.site-header__navigation-link {
+    @apply block;
+    @apply bg-purple-950;
+    @apply text-white;
+    @apply px-3;
+    @apply py-2;
+}

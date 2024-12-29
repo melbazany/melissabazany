@@ -1,6 +1,16 @@
 
 .social-navigation__nav {}
 
+.social-navigation__list-label {}
+
+.social-navigation__sublist {
+    @apply ms-3;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .social-navigation__list {
     list-style-type: none;
     display: flex;
