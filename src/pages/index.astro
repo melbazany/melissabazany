@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
 import ProfilePic from '../components/ProfilePic.astro';
+import SecondaryIntro from '../components/SecondaryIntro.astro';
 import TextAndImage from '../components/TextAndImage.astro';
 
 const introTitle = "Mel Bazany";
@@ -35,31 +36,11 @@ const secondTextAndImageCallToActionLinkUrl = "https://www.mightyinthemidwest.co
   <ProfilePic/>
   <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there", "Hej", "Hallo", "Hola", "Habari"]} />
 
-  <div class="b-secondary-intro">
-    <div class="b-secondary-intro__container">
-      <div class="b-secondary-intro__content">
-        <div class="b-secondary-intro__inner">
-          <div class="b-secondary-intro__inner-content">
-            <div class="b-secondary-intro__text-content">
-              <h2 class="b-secondary-intro__secondary-heading">
-                {secondaryIntroHeading}
-              </h2>
-              <div class="b-secondary-intro__subheading">
-                {secondaryIntroSubheading}
-              </div>
-              <div class="b-secondary-intro__body-text">
-                {secondaryIntroBodyText}
-              </div>
-            </div>
-            <div class="b-secondary-intro__button-content">
-              <a href="/contact" class="b-secondary-intro__contact-button">Contact Me</a>
-              <a href="/contact" class="b-secondary-intro__contact-button">Inquire About Photography</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <SecondaryIntro
+    secondaryIntroHeading={secondaryIntroHeading}
+    secondaryIntroSubheading={secondaryIntroSubheading}
+    secondaryIntroBodyText={secondaryIntroBodyText}
+  />
 
   <TextAndImage
     imageOn="left"

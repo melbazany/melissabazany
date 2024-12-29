@@ -1,0 +1,35 @@
+---
+const {
+    secondaryIntroHeading,
+    secondaryIntroSubheading,
+    secondaryIntroBodyText
+} = Astro.props;
+---
+
+<div class="b-secondary-intro">
+    <div class="b-secondary-intro__container">
+      <div class="b-secondary-intro__content">
+        <div class="b-secondary-intro__inner">
+          <div class="b-secondary-intro__inner-content">
+            <div class="b-secondary-intro__text-content">
+              <h2 class="b-secondary-intro__secondary-heading">
+                {secondaryIntroHeading}
+              </h2>
+              <div class="b-secondary-intro__subheading">
+                {secondaryIntroSubheading}
+              </div>
+              <div class="b-secondary-intro__body-text">
+                {secondaryIntroBodyText.map(paragraph => (
+                    <p>{paragraph}</p>
+                  ))}
+              </div>
+            </div>
+            <div class="b-secondary-intro__button-content">
+              <a href="/contact" class="b-secondary-intro__contact-button">Contact Me</a>
+              <a href="/contact" class="b-secondary-intro__contact-button">Inquire About Photography</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
