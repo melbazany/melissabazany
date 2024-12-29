@@ -4,6 +4,8 @@ const {
     secondaryIntroSubheading,
     secondaryIntroBodyText
 } = Astro.props;
+
+const currentPath = Astro.url.pathname;
 ---
 
 <div class="b-secondary-intro">
@@ -24,10 +26,13 @@ const {
                   ))}
               </div>
             </div>
-            <div class="b-secondary-intro__button-content">
-              <a href="/contact" class="b-secondary-intro__contact-button">Contact Me</a>
-              <a href="/contact" class="b-secondary-intro__contact-button">Inquire About Photography</a>
-            </div>
+            {currentPath != '/contact/'
+            ? (
+                <div class="b-secondary-intro__button-content">
+                    <a href="/contact" class="b-secondary-intro__contact-button">Contact Me</a>
+                    <a href="/contact" class="b-secondary-intro__contact-button">Inquire About Photography</a>
+                </div>)
+            : null}
           </div>
         </div>
       </div>
