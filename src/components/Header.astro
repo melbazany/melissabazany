@@ -1,9 +1,17 @@
 ---
+import BeeLogo from "./BeeLogo.astro";
 import Navigation from "./Navigation.astro";
-import ThemeIcon from "./ThemeIcon.astro";
 ---
 
-<header class="site__header">
-    <ThemeIcon/>
-    <Navigation/>
+<header class="site-header">
+    <div class="site-header__container">
+        <div class="site-header__content">
+            <div class="site-header__inner">
+                <div class="site-header__inner-content">
+                    <BeeLogo/>
+                    <Navigation/>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
