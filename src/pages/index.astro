@@ -2,10 +2,81 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
 import ProfilePic from '../components/ProfilePic.astro';
+import TextAndImage from '../components/TextAndImage.astro';
+
 const introTitle = "Mel Bazany";
 const introSubtitle = "Web Developer, Photographer";
+
+const secondaryIntroHeading = "Utilizing cameras and code to capture memories and craft digital identities."
+const secondaryIntroSubheading = "I enjoy translating brand identities into online presences by weekday,  followed by holding back tears behind my camera as you walk down the aisle by weekend."
+const secondaryIntroBodyText = "Who am I? An analytical mind who has experiences in crafting memories and websites. With a decade of experience in both web development and photography (weddings, engagements, families, seniors, and all of the dogs that I can convince you to bring along), I help people like you get their plans in order. We can skip the small talk and get down to the nitty gritty of planning your big day, or we can talk about how to build a refined, authentic online presence."
+
+const firstTextAndImageHeading = "Photography";
+const firstTextAndImageBodyText = [
+  "I’m ready to be your coordinator, hype man, friend, and person with an expensive camera busting some very uncomfortable moves on the reception dance floor.",
+  "I’m a Midwest photographer who revels in taking your photos while making you feel as extraordinary as you truly are. In all of your giggly, dimply glory.",
+  "Let’s talk about your recent engagement, your upcoming wedding, your family photos... and, yes, you can absolutely bring your dog."
+];
+const firstTextAndImageCallToActionLinkText = "Inquire About Photography";
+const firstTextAndImageCallToActionLinkIsExternal = true;
+const firstTextAndImageCallToActionLinkUrl = "/contact";
+
+const secondTextAndImageHeading = "Web Development";
+const secondTextAndImageBodyText = [
+  "I’m ready to be your coordinator, hype man, friend, and person with an expensive camera busting some very uncomfortable moves on the reception dance floor.",
+  "lorem ipsum et dolor.",
+];
+const secondTextAndImageCallToActionLinkText = "Learn About Mighty";
+const secondTextAndImageCallToActionLinkIsExternal = true;
+const secondTextAndImageCallToActionLinkUrl = "https://www.mightyinthemidwest.com";
+
 ---
 <BaseLayout introTitle={introTitle} introSubtitle={introSubtitle}>
-  <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there", "Hej", "Hallo", "Hola", "Habari"]} />
   <ProfilePic/>
+  <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there", "Hej", "Hallo", "Hola", "Habari"]} />
+
+  <div class="b-secondary-intro">
+    <div class="b-secondary-intro__container">
+      <div class="b-secondary-intro__content">
+        <div class="b-secondary-intro__inner">
+          <div class="b-secondary-intro__inner-content">
+            <div class="b-secondary-intro__text-content">
+              <h2 class="b-secondary-intro__secondary-heading">
+                {secondaryIntroHeading}
+              </h2>
+              <div class="b-secondary-intro__subheading">
+                {secondaryIntroSubheading}
+              </div>
+              <div class="b-secondary-intro__body-text">
+                {secondaryIntroBodyText}
+              </div>
+            </div>
+            <div class="b-secondary-intro__button-content">
+              <a href="/contact" class="b-secondary-intro__contact-button">Contact Me</a>
+              <a href="/contact" class="b-secondary-intro__contact-button">Inquire About Photography</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <TextAndImage
+    imageOn="left"
+    textAndImageHeading={firstTextAndImageHeading}
+    textAndImageBodyText={firstTextAndImageBodyText}
+    textAndImageCallToActionLinkText={firstTextAndImageCallToActionLinkText}
+    textAndImageCallToActionLinkIsExternal={firstTextAndImageCallToActionLinkIsExternal}
+    textAndImageCallToActionLinkUrl={firstTextAndImageCallToActionLinkUrl}
+    />
+
+    <TextAndImage
+    imageOn="right"
+    textAndImageHeading={secondTextAndImageHeading}
+    textAndImageBodyText={secondTextAndImageBodyText}
+    textAndImageCallToActionLinkText={secondTextAndImageCallToActionLinkText}
+    textAndImageCallToActionLinkIsExternal={secondTextAndImageCallToActionLinkIsExternal}
+    textAndImageCallToActionLinkUrl={secondTextAndImageCallToActionLinkUrl}
+  />
+
 </BaseLayout>
