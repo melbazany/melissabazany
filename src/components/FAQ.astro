@@ -1,0 +1,103 @@
+---
+const faqHeading = "F-un-AQ";
+
+const faqItems = [
+    {
+        title: "Strengths",
+        content: [
+            "Achiever",
+            "Discipline",
+            "Analytical",
+            "Consistency",
+            "Strategic"
+        ]
+    },
+    {
+        title: "Travel",
+        content: [
+            "Sedona, AZ",
+            "Seattle, WA",
+            "San Juan Islands",
+            "Denver, CO",
+            "Zion, UT",
+            "Charleston, SC",
+            "Savannah, GA",
+            "San Francisco, CA",
+            "Hocking Hills, OH",
+            "Grand Marais, MI",
+            "Minneapolis, MI",
+            "Cheboygan, WI",
+            "Chicago, IL (currently)",
+            "Tennessee",
+            "New River, WV",
+            "Captiva & Sanibel Islands, FL",
+        ]
+    },
+    {
+        title: "Facts",
+        content: [
+            "I grew up playing softball, and played at Hope College.",
+            "Honey bee = Latin",
+            "Born in Seattle",
+            "I’m a dog person who owns two cats",
+            "I’m an avid runner",
+            "Pokemon, Animal Crossing, and Harvest Moon encapsulated my childhood.",
+            "Melissa (Μελίσσα): In Greek, it means 'bee.' It comes from meli (μέλι), meaning 'honey'. The name Melissa was used in Greek mythology and ancient culture to refer to a nymph who discovered how to collect honey or a priestess of Demeter associated with bees.",
+            "I’ve been with my high-school sweetheart, Matt, since 2011 (and counting!)",
+        ]
+    },
+    {
+        title: "Books",
+        content: [
+            'Follow me on <a href="https://www.goodreads.com/melissabazany" target="_blank" rel="noopener noreferrer">Goodreads!</a>',
+            "FOUR THOUSAND WEEKS - OLIVER BURKEMAN",
+            "THINK AGAIN - ADAM GRANT",
+            "ATOMIC HABITS - JAMES CLEAR",
+            "Outliers: The Story of Success - MALCOLM GLADWELL",
+            "The Power of Your Subconscious Mind - DR. JOSEPH MURPHY",
+            "Running Rewired: Reinvent Your Run for Stability, Strength, and Speed -Jay Dicharry",
+            "Build the Life You Want: The Art and Science of Getting Happier - Arthur C. Brooks",
+            "Humility Rules: Saint Benedict's Twelve-Step Guide to Genuine Self-Esteem - J. Augustine Wetta",
+            "The Gifts of Imperfection -Brené Brown",
+            "The Four Agreements - Miguel Ruiz",
+            "Why Has Nobody Told Me This Before?",
+            "Glass Castle",
+            "Gatsby",
+            "Fahrenheit 451",
+        ]
+    }
+]
+---
+
+<div class="b-faq">
+    <div class="b-faq__container">
+      <div class="b-faq__content">
+        <div class="b-faq__inner">
+          <div class="b-faq__inner-content">
+            <div class="b-faq__text-content">
+              <h2 class="b-faq__heading">
+                {faqHeading}
+              </h2>
+              <div class="b-faq__accordion">
+                {faqItems.map((faqItem, index) => (
+                    <div class="b-faq__accordion-item" key={index}>
+                        <div class="b-faq__accordion-item-title">{faqItem.title}</div>
+                        <div class="b-faq__accordion-item-content">
+                            <ul class="b-faq__accordion-item-content-list">
+                                {faqItem.content.map((faqContent, i) => (
+                                    <li
+                                        class="b-faq__accordion-item-content-bullet"
+                                        key={i}
+                                        set:html={faqContent}
+                                    ></li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                ))}
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
