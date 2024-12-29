@@ -4,7 +4,7 @@ import Footer from '../components/Footer.astro';
 
 import '../styles/app.css';
 
-const { pageTitle } = Astro.props;
+const { introTitle, introSubtitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -19,7 +19,18 @@ const { pageTitle } = Astro.props;
 		<div class="site__body">
             <Header/>
             <main>
-                <h1 class="page-title">{pageTitle}</h1>
+                <div class="b-intro">
+					<div class="b-intro__container">
+						<div class="b-intro__content">
+							<div class="b-intro__inner">
+								<div class="b-intro__inner-content">
+									<h1 class="b-intro__title">{introTitle}</h1>
+									<h2 class="b-intro__subtitle">{introSubtitle}</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
                 <slot/>
             </main>
             <Footer/>

@@ -3,11 +3,12 @@ import { getCollection } from "astro:content";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 
-const pageTitle = "Blog Index";
+const introTitle = "Blog Index";
+const introSubtitle = "Mel's Blog";
 const allPosts = await getCollection("blog");
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout introTitle={introTitle} introSubtitle={introSubtitle}>
 	<ul class="blog-posts__list">{allPosts.map((post: any) =>
 		<BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
 	)}</ul>

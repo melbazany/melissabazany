@@ -2,7 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout introTitle={frontmatter.title} introSubtitle={frontmatter.subtitle}>
     <ul class="blog-tags__list">{frontmatter.tags.map((tag: string) => <li class="blog-tag__list-item"><a class="blog-tag__link" href={`/tags/${tag}`}>{tag}</a></li>)}</ul>
     <p>{frontmatter.pubDate.toLocaleDateString()}</p>
     <p><em>{frontmatter.description}</em></p>
