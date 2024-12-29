@@ -1,5 +1,20 @@
 .site-header {}
 
+.site-header__container {}
+.site-header__content {}
+.site-header__inner {}
+.site-header__inner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header__logo {
+    svg {
+        height: 30px;
+    }
+}
+
 .site-header__navigation {}
 
 .site-header__navigation-list {
@@ -10,6 +25,7 @@
 
 .site-header__navigation-list-item {
 }
+
 .site-header__navigation-link {
     @apply block;
     @apply bg-purple-950;
