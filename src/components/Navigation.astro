@@ -1,19 +1,13 @@
+---
+const {primaryNavigationItems} = Astro.props;
+---
+
 <nav class="site-header__navigation" id="site-header__navigation">
     <ul class="site-header__navigation-list">
-        <li class="site-header__navigation-list-item">
-            <a class="site-header__navigation-link" href="/">Home</a>
-        </li>
-        <li class="site-header__navigation-list-item">
-            <a class="site-header__navigation-link" href="/about/">About</a>
-        </li>
-        <li class="site-header__navigation-list-item">
-            <a class="site-header__navigation-link" href="/contact/">Contact</a>
-        </li>
-        <li class="site-header__navigation-list-item">
-            <a class="site-header__navigation-link" href="/blog/">Blog</a>
-        </li>
-        <li class="site-header__navigation-list-item">
-            <a class="site-header__navigation-link" href="/tags/">Tags</a>
-        </li>
+        {primaryNavigationItems.map((item) => (
+            <li class="site-header__navigation-list-item">
+                <a class="site-header__navigation-link" href={item.url}>{item.title}</a>
+            </li>
+        ))}
     </ul>
 </nav>

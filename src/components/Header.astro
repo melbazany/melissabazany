@@ -1,6 +1,26 @@
 ---
 import BeeLogo from "./BeeLogo.astro";
+import MobileMenu from "./MobileMenu.vue";
 import Navigation from "./Navigation.astro";
+
+const primaryNavigationItems = [
+    {
+        title: "Home",
+        url: "/"
+    },
+    {
+        title: "About",
+        url: "/about/"
+    },
+    {
+        title: "Contact",
+        url: "/contact/"
+    },
+    {
+        title: "Blog",
+        url: "/blog/"
+    },
+];
 ---
 
 <header class="site-header">
@@ -9,7 +29,8 @@ import Navigation from "./Navigation.astro";
             <div class="site-header__inner">
                 <div class="site-header__inner-content">
                     <BeeLogo/>
-                    <Navigation/>
+                    <Navigation primaryNavigationItems={primaryNavigationItems}/>
+                    <MobileMenu client:load primaryNavigationItems={primaryNavigationItems}/>
                 </div>
             </div>
         </div>
