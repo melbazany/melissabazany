@@ -1,4 +1,6 @@
 ---
+import Accordion from '../components/Accordion.vue';
+
 const faqHeading = "F-un-AQ";
 
 const faqItems = [
@@ -83,35 +85,4 @@ const faqItems = [
 ]
 ---
 
-<div class="b-faq">
-    <div class="b-faq__container">
-      <div class="b-faq__content">
-        <div class="b-faq__inner">
-          <div class="b-faq__inner-content">
-            <div class="b-faq__text-content">
-              <h2 class="b-faq__heading">
-                {faqHeading}
-              </h2>
-              <div class="b-faq__accordion">
-                {faqItems.map((faqItem, index) => (
-                    <div class="b-faq__accordion-item" key={index}>
-                        <div class="b-faq__accordion-item-title">{faqItem.title}</div>
-                        <div class="b-faq__accordion-item-content">
-                            <ul class="b-faq__accordion-item-content-list">
-                                {faqItem.content.map((faqContent, i) => (
-                                    <li
-                                        class="b-faq__accordion-item-content-bullet"
-                                        key={i}
-                                        set:html={faqContent}
-                                    ></li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                ))}
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<Accordion client:load accordionItems={faqItems}/>
