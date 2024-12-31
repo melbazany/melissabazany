@@ -2,32 +2,40 @@
 import Social from './Social.astro';
 ---
 
-<footer class="site__footer">
-    <nav id="social-navigation__nav" class="social-navigation__nav">
-        <ul class="social-navigation__list">
-            <li class="social-navigation__list-item social-navigation__list-item--is-parent">
-                <div class="social-navigation__sublist-label">M. Bee Media</div>
-                <ul class="social-navigation__sublist">
-                    <li class="social-navigation__list-item">
-                        <Social displayName="Instagram" platform="instagram" username="m.bee.media" />
-                    </li>
-                    <li class="social-navigation__list-item">
-                        <Social displayName="Facebook" platform="facebook" username="mel.bee.media" />
-                    </li>
-                </ul>
-            </li>
-            <li class="social-navigation__list-item">
-                <Social displayName="LinkedIn" platform="linkedin" username="melissa-bazany" />
-            </li>
-            <li class="social-navigation__list-item">
-                <Social displayName="Github" platform="github" username="melbazany" />
-            </li>
-            <li class="social-navigation__list-item">
-                <Social displayName="Instagram (Personal)" platform="instagram" username="mel_bazany" />
-            </li>
-            <li class="social-navigation__list-item">
-                <Social displayName="Facebook (Personal)" platform="facebook" username="melbazany23" />
-            </li>
-        </ul>
-    </nav>
+<footer class="b-site__footer">
+    <div class="b-site-footer__container">
+        <div class="b-site-footer__content">
+            <div class="b-site-footer__inner">
+                <div class="b-site-footer__inner-content">
+                    <nav id="b-site-footer__social-navigation" class="b-site-footer__social-navigation">
+                        <ul class="b-site-footer-social-navigation__list">
+                            <li class="b-site-footer-social-navigation__list-item b-site-footer-social-navigation__list-item--is-parent">
+                                <div class="b-site-footer-social-navigation__sublist-label">M. Bee Media</div>
+                                <ul class="b-site-footer-social-navigation__sublist">
+                                    <li class="b-site-footer-social-navigation__list-item">
+                                        <Social displayName="Instagram" platform="instagram" username="m.bee.media" />
+                                    </li>
+                                    <li class="b-site-footer-social-navigation__list-item">
+                                        <Social displayName="Facebook" platform="facebook" username="mel.bee.media" />
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="b-site-footer-social-navigation__list-item">
+                                <Social displayName="LinkedIn" platform="linkedin" username="melissa-bazany" />
+                            </li>
+                            <li class="b-site-footer-social-navigation__list-item">
+                                <Social displayName="Github" platform="github" username="melbazany" />
+                            </li>
+                            <li class="b-site-footer-social-navigation__list-item">
+                                <Social displayName="Instagram (Personal)" platform="instagram" username="mel_bazany" />
+                            </li>
+                            <li class="b-site-footer-social-navigation__list-item">
+                                <Social displayName="Facebook (Personal)" platform="facebook" username="melbazany23" />
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
