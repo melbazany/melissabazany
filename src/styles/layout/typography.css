@@ -1,0 +1,154 @@
+/* ================================================================================*/
+/* Base: Typography ===============================================================*/
+/* ================================================================================*/
+/* Styles for the default global typography =======================================*/
+
+@layer base {
+  :root {
+    @apply text-[16px];
+  }
+
+  /* Display ========================================================================*/
+  .d1 {
+    @apply text-d1;
+    @apply font-ivypresto-headline;
+  }
+
+  .d2 {
+    @apply text-d2;
+    @apply font-ivypresto-headline;
+  }
+
+  .d3 {
+    @apply text-d3;
+    @apply font-ivypresto-headline;
+  }
+
+  .d4 {
+    @apply text-d4;
+    @apply font-ivypresto-headline;
+  }
+
+  .d5 {
+    @apply text-d5;
+    @apply font-ivypresto-headline;
+  }
+
+  .d6 {
+    @apply text-d6;
+    @apply font-ivypresto-headline;
+  }
+
+  /* Body ========================================================================*/
+  .b1 {
+    @apply text-b1;
+    @apply font-source-serif;
+  }
+
+  /* Defaults =======================================================================*/
+
+  /* Headings =====================*/
+
+  /* h1 */
+  h1 {
+    @apply text-balance;
+    @apply d1;
+  }
+
+  /* h2 */
+  h2 {
+    @apply text-balance;
+    @apply d2;
+  }
+
+  /* h3 */
+  h3 {
+    @apply text-balance;
+    @apply d3;
+  }
+
+  /* h4 */
+  h4 {
+    @apply text-balance;
+    @apply d4;
+  }
+
+  /* h5 */
+  h5 {
+    @apply text-balance;
+    @apply d5;
+  }
+
+  /* h6 */
+  h6 {
+    @apply text-balance;
+    @apply d6;
+  }
+
+  /* Body =========================*/
+  body {
+    @apply b1 text-pretty;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Links ======================= */
+  a {
+    @apply bg-white;
+  }
+
+  /* Formatting ===================*/
+  p {
+    @apply my-6;
+    @apply first:mt-0;
+    @apply last:mb-0;
+
+    strong {
+      @apply font-bold;
+    }
+
+    u {
+      @apply underline;
+    }
+
+    i {
+      @apply italic;
+    }
+  }
+
+  address {
+    @apply not-italic;
+  }
+}
+
+@layer utilities {
+  :root {
+    --tw-ring-color: theme(colors.black);
+  }
+
+  select,
+  input {
+    border: none !important;
+  }
+
+  [type='text']:focus,
+  input:where(:not([type])):focus,
+  [type='email']:focus,
+  [type='url']:focus,
+  [type='password']:focus,
+  [type='number']:focus,
+  [type='date']:focus,
+  [type='datetime-local']:focus,
+  [type='month']:focus,
+  [type='search']:focus,
+  [type='tel']:focus,
+  [type='time']:focus,
+  [type='week']:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus {
+    --tw-ring-color: theme(colors.black);
+    --tw-ring-offset-color: theme(colors.black);
+    border: none;
+  }
+}
