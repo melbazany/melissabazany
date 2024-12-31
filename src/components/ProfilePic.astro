@@ -1,1 +1,6 @@
-<img class="b-intro__profile-pic" src="/profile-pic-black-white.jpg" alt="Melissa Bazany black and white headshot">
+---
+import { Image } from "astro:assets";
+import myProfilePic from '../../src/images/profile-pic-black-white.jpg';
+---
+
+<Image src={myProfilePic} class="b-intro__profile-pic" alt="Melissa Bazany, headshot in black and white" width="475"/>

@@ -2,6 +2,8 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+import ProfilePic from '../components/ProfilePic.astro';
+
 import '../styles/app.css';
 
 const { introTitle, introSubtitle } = Astro.props;
@@ -25,8 +27,11 @@ const { introTitle, introSubtitle } = Astro.props;
 						<div class="b-intro__content">
 							<div class="b-intro__inner">
 								<div class="b-intro__inner-content">
-									<h1 class="b-intro__title">{introTitle}</h1>
-									<div class="b-intro__subtitle">{introSubtitle}</div>
+									<div class="b-intro__text-content">
+										<h1 class="b-intro__title">{introTitle}</h1>
+										<h2 class="b-intro__subtitle">{introSubtitle}</h2>
+									</div>
+									<ProfilePic/>
 								</div>
 							</div>
 						</div>

@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import myProfilePic from '../../src/images/profile-pic-black-white.jpg';
+
 const {
     imageOn,
     textAndImageHeading,
@@ -10,13 +13,14 @@ const {
 
 const imageOnClass = imageOn ? `b-text-and-image__inner-content--is-image-${imageOn}` : '';
 ---
+
 <div class="b-text-and-image">
     <div class="b-text-and-image__container">
       <div class="b-text-and-image__content">
         <div class="b-text-and-image__inner">
           <div class={`b-text-and-image__inner-content ${imageOnClass}`}>
             <div class="b-text-and-image__image-item">
-              <img src="/profile-pic-black-white.jpg" alt="Couple smiling and laughing">
+              <Image src={myProfilePic} class="b-intro__profile-pic" alt="Melissa Bazany, headshot in black and white" width="475"/>
             </div>
             <div class="b-text-and-image__text-item">
               <h3 class="b-text-and-image__heading">{textAndImageHeading}</h3>

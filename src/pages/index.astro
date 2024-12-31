@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
-import ProfilePic from '../components/ProfilePic.astro';
 import SecondaryIntro from '../components/SecondaryIntro.astro';
 import TextAndImage from '../components/TextAndImage.astro';
 
@@ -35,7 +34,6 @@ const secondTextAndImageCallToActionLinkUrl = "https://www.mightyinthemidwest.co
 
 ---
 <BaseLayout introTitle={introTitle} introSubtitle={introSubtitle}>
-  <ProfilePic/>
   <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there", "Hej", "Hallo", "Hola", "Habari"]} />
 
   <SecondaryIntro
