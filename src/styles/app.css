@@ -1,5 +1,20 @@
 @import './vendor/tailwind';
 
+@import './layout/buttons';
+@import './layout/layout';
+@import './layout/image-colorize';
+@import './layout/page-blocks';
 @import './layout/reset';
+@import './layout/typography';
+
 @import './globals/header';
 @import './globals/footer';
+
+@import './blocks/intro';
+@import './blocks/faq';
+@import './blocks/jotform-contact-form';
+@import './blocks/secondary-intro';
+@import './blocks/text-and-image';
+
+@import './components/accordion';
+@import './components/navigation-and-mobile-menu';
