@@ -31,7 +31,8 @@
 
   .d5 {
     @apply text-d5;
-    @apply font-ivypresto-headline;
+    @apply font-questa-sans;
+    @apply uppercase;
   }
 
   .d6 {
@@ -130,7 +131,7 @@
 
   /* Formatting ===================*/
   p {
-    @apply my-6;
+    @apply my-4;
     @apply first:mt-0;
     @apply last:mb-0;
 
