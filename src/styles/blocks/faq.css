@@ -1,0 +1,29 @@
+.b-faq {}
+
+.b-faq__container {
+    @apply page-block__container;
+}
+
+.b-faq__content {}
+
+.b-faq__inner {
+    @apply page-block__inner;
+}
+
+.b-faq__inner-content {
+    @apply grid;
+    @apply gap-4;
+}
+
+.b-faq__text-item {
+    @apply sm:text-center;
+}
+
+.b-faq__heading {
+    @apply d4;
+    @apply mb-1;
+    @apply sm:mb-2;
+    @apply md:mb-4;
+}
+
+.b-faq__accordion-item {}

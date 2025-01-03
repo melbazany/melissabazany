@@ -1,0 +1,59 @@
+/* FAQ Accordion Styles */
+.c-accordion {
+    --accordion-item-block-spacing: theme(size.4);
+}
+
+.c-accordion__accordion-list {}
+
+.c-accordion-item {}
+
+.c-accordion-item__details {}
+
+.c-accordion__accordion-item {
+    padding-block: var(--accordion-item-block-spacing);
+    @apply border-black border-solid border-b-[1px];
+}
+
+.c-accordion-item__button {
+    @apply flex;
+    @apply w-full;
+    @apply justify-between;
+    @apply items-center;
+    @apply d6;
+}
+
+.c-accordion-item__button--is-open {}
+
+.c-accordion-item__button-title {}
+
+.c-accordion-item__button-title {}
+
+.c-accordion-item__state-indicator-icon {
+    @apply text-[2rem];
+}
+
+.c-accordion-item__panel {
+    @apply grid;
+    @apply gap-2;
+    padding-block-start: var(--accordion-item-block-spacing);
+
+    * {
+        @apply b1;
+    }
+}
+
+.c-accordion-item__list {
+    @apply list-disc;
+    @apply ps-8;
+
+    &:has(:nth-child(8)) {
+        @screen sm {
+            @apply columns-2;
+        }
+    }
+}
+
+.c-accordion-item__list-item {
+    @apply list-item;
+    @apply leading-normal;
+}
