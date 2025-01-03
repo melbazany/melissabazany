@@ -1,0 +1,82 @@
+/* Secondary Intro */
+.b-secondary-intro {}
+.b-secondary-intro__container {
+    @apply page-block__container;
+}
+
+.b-secondary-intro__content {}
+
+.b-secondary-intro__inner {
+    @apply page-block__inner;
+}
+
+.b-secondary-intro__inner-content {
+    @apply grid;
+    @apply gap-6;
+    @apply sm:gap-10;
+    @apply md:gap-16;
+}
+
+.b-secondary-intro__text-content {
+    @apply grid;
+    @apply gap-3;
+
+    @screen sm {
+        grid-template-areas:
+            "secondaryHeading secondaryHeading"
+            "subheading bodyText";
+        @apply gap-x-10;
+        @apply gap-y-8;
+    }
+
+    @screen md {
+        @apply gap-x-16;
+        @apply gap-y-12;
+    }
+
+    &:not(:has(:nth-child(2))) {
+        @apply gap-0;
+    }
+}
+
+.b-secondary-intro__secondary-heading {
+    @apply d2;
+    @apply block;
+    @apply w-fit;
+
+    @screen sm{
+        @apply mx-auto;
+        @apply text-center;
+        grid-area: secondaryHeading;
+    }
+}
+
+.b-secondary-intro__subheading {
+    @apply d3;
+    @apply mb-3;
+
+    @screen md {
+        grid-area: subheading;
+    }
+}
+
+.b-secondary-intro__body-text {
+    @apply b1;
+
+    @screen md {
+        grid-area: bodyText;
+    }
+}
+
+.b-secondary-intro__button-content {
+    @apply flex;
+    @apply flex-wrap;
+    @apply sm:flex-nowrap;
+    @apply gap-4;
+    @apply items-center;
+    @apply sm:justify-center;
+}
+
+.b-secondary-intro__contact-button {
+    @apply button-link;
+}
