@@ -94,7 +94,38 @@
 
   /* Links ======================= */
   a {
-    @apply bg-white;
+    &:not([class]) {
+      @apply inline-block;
+      @apply relative;
+      @apply no-underline;
+      @apply px-[2px];
+      @apply delay-150;
+
+      &::after {
+        @apply absolute;
+        @apply content-[''];
+        @apply -z-10;
+        @apply bg-black;
+        @apply h-[1%];
+        @apply w-full;
+        @apply top-full;
+        @apply bottom-0;
+        @apply left-0;
+        @apply right-0;
+        @apply transition-all;
+        @apply ease-in-out;
+        @apply duration-300;
+      }
+
+      &:active, &:focus-visible, &:hover {
+        @apply text-white;
+
+        &::after {
+          @apply h-full;
+          @apply -top-0;
+        }
+      }
+    }
   }
 
   /* Formatting ===================*/
