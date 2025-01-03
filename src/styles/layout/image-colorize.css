@@ -1,0 +1,34 @@
+@layer utilities {
+    .picture-item {
+        @apply grid;
+        grid-template-areas: "stack";
+        @apply mx-auto;
+
+        &:active, &:focus-visible, &:hover {
+            [class*="--black-white"] {
+                @apply opacity-0;
+                @apply delay-300;
+            }
+
+            [class*="--color"] {
+                @apply opacity-100;
+            }
+        }
+    }
+
+    .picture {
+        @apply transition-opacity;
+        @apply duration-500;
+        @apply ease-linear;
+
+        &[class*="--black-white"] {
+            grid-area: stack;
+            @apply opacity-100;
+        }
+
+        &[class*="--color"] {
+            grid-area: stack;
+            @apply opacity-0;
+        }
+    }
+}
