@@ -17,16 +17,20 @@ const currentPath = Astro.url.pathname;
               <h2 class="b-secondary-intro__secondary-heading">
                 {secondaryIntroHeading}
               </h2>
-              <div class="b-secondary-intro__subheading">
-                {secondaryIntroSubheading}
-              </div>
-              <div class="b-secondary-intro__body-text">
+              {secondaryIntroSubheading != null && secondaryIntroSubheading.length > 0 ? (
+                <div class="b-secondary-intro__subheading">
+                  {secondaryIntroSubheading}
+                </div>
+              ) : null}
+              {secondaryIntroBodyText != null && secondaryIntroBodyText.length > 0 ? (
+                <div class="b-secondary-intro__body-text">
                 {secondaryIntroBodyText.map(paragraph => (
                     <p>{paragraph}</p>
                   ))}
               </div>
+              ) : null}
             </div>
-            {currentPath != '/contact/'
+            {currentPath != '/contact/' && currentPath != '/contact'
             ? (
                 <div class="b-secondary-intro__button-content">
                     <a href="/contact" class="b-secondary-intro__contact-button">Contact Me</a>
