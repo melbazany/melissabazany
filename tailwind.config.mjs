@@ -17,13 +17,13 @@ export default {
             'source-serif': ['source-serif', 'serif'],
         },
 		fontSize: (theme) => ({
-            'b1': ['clamp(1.125rem, 1.0722rem + 0.2222vw, 1.25rem)', {
+            'b1': ['1.125rem', {
                 lineHeight: '1.2',
                 letterSpacing: '0',
                 fontWeight: '400',
             }],
             'd1': ['clamp(3.5rem, 1.6818rem + 6.2727vw, 7.5rem)', {
-                lineHeight: '1',
+                lineHeight: '1.2',
                 letterSpacing: '0',
                 fontWeight: '600',
             }],
@@ -32,20 +32,20 @@ export default {
                 letterSpacing: '0',
                 fontWeight: '400',
             }],
-            'd3': ['clamp(1.75rem, 1.663rem + 0.4348vw, 2rem)', {
-                lineHeight: '1',
+            'd3': ['clamp(1.375rem, 1.1576rem + 1.087vw, 2rem)', {
+                lineHeight: '1.25',
                 letterSpacing: '0',
-                fontWeight: '600',
+                fontWeight: '400',
             }],
-            'd4': ['clamp(1.5rem, 1.413rem + 0.4348vw, 1.75rem)', {
+            'd4': ['clamp(1.75rem, 1.3434rem + 1.7582vw, 2.75rem)', {
                 lineHeight: '1',
                 letterSpacing: '0',
                 fontWeight: '400',
             }],
             'd5': ['clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem)', {
 				lineHeight: '1',
-                letterSpacing: '0',
-                fontWeight: '400',
+                letterSpacing: '0.12em',
+                fontWeight: '500',
             }],
 			'd6': ['clamp(1rem, 0.9096rem + 0.4255vw, 1.25rem)', {
 				lineHeight: '1',
