@@ -6,7 +6,9 @@ const {primaryNavigationItems} = Astro.props;
     <ul class="site-header__navigation-list">
         {primaryNavigationItems.map((item) => (
             <li class="site-header__navigation-list-item">
-                <a class="site-header__navigation-link" href={item.url}>{item.title}</a>
+                <a class="site-header__navigation-link" href={item.url}>
+                    <span class="site-header__navigation-link-text">{item.title}</span>
+                </a>
             </li>
         ))}
     </ul>

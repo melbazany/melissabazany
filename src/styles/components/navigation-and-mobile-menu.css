@@ -1,0 +1,144 @@
+
+.site-header__navigation {
+    @apply hidden;
+    @apply lg:block;
+}
+
+.site-header__navigation-list {
+    @apply flex;
+    @apply flex-wrap;
+    @apply gap-6;
+}
+
+.site-header__navigation-list-item {
+}
+
+.site-header__navigation-link {
+    @apply block;
+    @apply px-2;
+    @apply !no-underline;
+    @apply relative;
+
+    &::after {
+        @apply absolute;
+        @apply content-[''];
+        @apply z-0;
+        @apply bg-black;
+        @apply h-[0%];
+        @apply w-full;
+        @apply top-full;
+        @apply bottom-0;
+        @apply left-0;
+        @apply right-0;
+        @apply transition-all;
+        @apply ease-in-out;
+        @apply duration-300;
+    }
+
+    &:active, &:focus-visible, &:hover {
+        .site-header__navigation-link-text {
+            @apply text-white;
+        }
+
+        &::after {
+            @apply h-full;
+            @apply -top-0;
+        }
+    }
+}
+
+.site-header__navigation-link-text {
+    @apply relative;
+    @apply z-[1];
+    @apply font-normal;
+    @apply font-ivypresto-headline;
+    font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+    @apply transition-colors;
+    @apply delay-150;
+    @apply ease-in-out;
+}
+
+.c-site-header__mobile-menu-trigger-button {
+    height: 30px;
+    width: 30px;
+}
+
+
+/* ===========================================================================*/
+/* Globals: Mobile Menu ==============================================================*/
+/* ===========================================================================*/
+/* Styles for the Header's Mobile Menu  =====================================================*/
+
+.c-site-header__mobile-menu {}
+
+.c-site-header__mobile-menu-trigger-button {
+    @apply h-10 w-10;
+    @apply flex items-center justify-center;
+    @apply lg:hidden;
+
+    > svg {
+        @apply h-5;
+        @apply stroke-2;
+    }
+}
+
+.c-site-header__mobile-menu-dialog {
+    --site-header-mobile-menu-primary-and-topic-menus-gap: 6.875rem;
+    @apply bg-white;
+    @apply fixed;
+    @apply inset-0;
+    @apply h-full;
+    @apply overflow-y-scroll;
+}
+
+.c-site-header__mobile-menu-dialog__container {
+    @apply page-block__container;
+}
+
+.c-site-header__mobile-menu-dialog__content {}
+.c-site-header__mobile-menu-dialog__inner {
+    @apply page-block__inner;
+}
+.c-site-header__mobile-menu-dialog__inner-content {
+    @apply text-white;
+    @apply gap-12;
+}
+
+.c-site-header__mobile-menu-dialog-top-bar {
+    @apply w-full;
+    @apply flex;
+    @apply items-center;
+    @apply justify-end;
+}
+
+.c-site-header__mobile-menu-header-close-button {
+    svg {
+        * {
+            @apply stroke-black;
+        }
+    }
+}
+
+.c-site-header__mobile-menu-navigation {}
+
+.c-site-header__mobile-menu-primary-navigation-content {
+}
+
+.c-site-header__mobile-menu-primary-navigation {}
+
+.c-site-header__mobile-menu-primary-navigation-list {
+    @apply grid;
+    @apply gap-[1rem];
+}
+
+.c-site-header__mobile-menu-primary-navigation-list-item {}
+
+.c-site-header__mobile-menu-primary-navigation-link {
+    @apply !no-underline;
+    @apply block;
+    @apply w-fit;
+    @apply text-black;
+    @apply font-normal;
+    @apply font-ivypresto-headline;
+    @apply text-[1.25rem];
+}
