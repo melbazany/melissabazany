@@ -1,0 +1,12 @@
+@layer components {
+    .page-block__container {
+        @apply py-6;
+        @apply md:py-8;
+    }
+
+    .page-block__inner {
+        @apply max-w-screen-md;
+        @apply mx-auto;
+        @apply px-5;
+    }
+}
