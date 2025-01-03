@@ -1,7 +1,7 @@
 ---
-import SecondaryIntro from '../components/SecondaryIntro.astro';
-import FAQ from '../components/FAQ.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SecondaryIntro from '../components/SecondaryIntro.astro';
+import JotformContactForm from '../components/JotformContactForm.astro';
 
 const introTitle = "Contact Mel";
 const introSubtitle = "Let's talk";
@@ -16,4 +16,5 @@ const secondaryIntroBodyText = [];
     secondaryIntroSubheading={secondaryIntroSubheading}
     secondaryIntroBodyText={secondaryIntroBodyText}
   />
+  <JotformContactForm/>
 </BaseLayout>
