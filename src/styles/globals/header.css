@@ -1,8 +1,15 @@
 .site-header {}
 
-.site-header__container {}
+.site-header__container {
+    @apply page-block__container;
+}
+
 .site-header__content {}
-.site-header__inner {}
+
+.site-header__inner {
+    @apply page-block__inner;
+}
+
 .site-header__inner-content {
     display: flex;
     justify-content: space-between;
@@ -11,25 +18,15 @@
 
 .site-header__logo {
     svg {
+        @apply transition-all;
+        @apply duration-300;
+        transform: rotateY(180deg);
         height: 30px;
     }
-}
 
-.site-header__navigation {}
-
-.site-header__navigation-list {
-    @apply flex;
-    @apply flex-wrap;
-    @apply gap-2;
-}
-
-.site-header__navigation-list-item {
-}
-
-.site-header__navigation-link {
-    @apply block;
-    @apply bg-purple-950;
-    @apply text-white;
-    @apply px-3;
-    @apply py-2;
+    &:active, &:focus-visible, &:hover {
+        svg {
+            transform: rotateY(0deg);
+        }
+    }
 }
