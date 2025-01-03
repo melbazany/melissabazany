@@ -1,6 +1,5 @@
 @import './vendor/tailwind';
 
-@import './layout/light-dark';
 @import './layout/reset';
 @import './globals/header';
 @import './globals/footer';
