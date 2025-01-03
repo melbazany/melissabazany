@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import jenAndLakeColor from '../../src/images/foco-engagement-3330-color.jpg';
+import jenAndLakeBlackWhite from '../../src/images/foco-engagement-3330-black-white.jpg';
+import MBeeMediaLogoInWhite from '../../src/images/MBeeMediaLogoWhite.png';
+---
+
+<div class="b-text-and-image__image-item-content">
+    <Image src={MBeeMediaLogoInWhite} class="b-text-and-image__icon-overlay" alt="M. Bee Media bee icon from logo in white" width="600"/>
+    <Image src={jenAndLakeBlackWhite} class="b-text-and-image__image b-text-and-image__image--black-white" alt="Man in t-shirt and glasses lifting up curly-haired girl in jeans laughing in black and white" width="600"/>
+    <Image src={jenAndLakeColor} class="b-text-and-image__image b-text-and-image__image--color" alt="Man in t-shirt and glasses lifting up curly-haired girl in jeans laughing in color" width="600"/>
+</div>
