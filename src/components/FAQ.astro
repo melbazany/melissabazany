@@ -6,7 +6,8 @@ const faqHeading = "F-un-AQ";
 const faqItems = [
     {
         title: "Strengths",
-        content: [
+        introText: `<i>According to <a href="https://www.gallup.com/cliftonstrengths/en/" target="_blank" rel="external noopener noreferrer">Gallup's ClintonStrengths</a></i>`,
+        listContent: [
             "Achiever",
             "Discipline",
             "Analytical",
@@ -16,7 +17,7 @@ const faqItems = [
     },
     {
         title: "Travel",
-        content: [
+        listContent: [
             "Sedona, AZ",
             "Seattle, WA",
             "San Juan Islands",
@@ -37,7 +38,7 @@ const faqItems = [
     },
     {
         title: "Facts",
-        content: [
+        listContent: [
             "I grew up playing softball, and played at Hope College.",
             "Honey bee = Latin",
             "Born in Seattle",
@@ -50,8 +51,8 @@ const faqItems = [
     },
     {
         title: "Books",
-        content: [
-            'Follow me on <a href="https://www.goodreads.com/melissabazany" target="_blank" rel="noopener noreferrer">Goodreads!</a>',
+        introText: 'Follow me on <a href="https://www.goodreads.com/melissabazany" target="_blank" rel="noopener noreferrer">Goodreads!</a>',
+        listContent: [
             "FOUR THOUSAND WEEKS - OLIVER BURKEMAN",
             "THINK AGAIN - ADAM GRANT",
             "ATOMIC HABITS - JAMES CLEAR",
@@ -70,19 +71,32 @@ const faqItems = [
     },
     {
         title: "Articles",
-        content: [
+        listContent: [
             `<a href="https://www.sahilbloom.com/newsletter/the-most-powerful-life-hacks-ive-found">The Most Powerful Life Hacks I've Found | Sahil Bloom</a>`,
             `<a href="https://nabeelqu.co/principles">Principles | Nabeel S. Qureshi</a>`,
             `<a href="https://www.sahilbloom.com/newsletter/its-later-than-you-think">It's Later Than You Think | Sahil Bloom</a>`,
+            `<a href="https://kk.org/thetechnium/101-additional-advices/">101 Additional Advices | Kevin Kelly</a>`,
         ]
     },
     {
         title: "Podcasts",
-        content: [
-            '<p>Check out my <a href="https://open.spotify.com/playlist/10GtMbowXoERIWKQwsAAiU?si=BRyx1YEgQryNlvOz54TKsA">Worthwhile Podcasts playlist</a> on Spotify.</p>'
-        ]
+        introText: 'Check out my <a href="https://open.spotify.com/playlist/10GtMbowXoERIWKQwsAAiU?si=BRyx1YEgQryNlvOz54TKsA">Worthwhile Podcasts playlist</a> on Spotify.'
     }
 ]
 ---
-
-<Accordion client:load accordionItems={faqItems}/>
+<div class="b-faq">
+    <div class="b-faq__container">
+        <div class="b-faq__content">
+            <div class="b-faq__inner">
+                <div class="b-faq__inner-content">
+                    <div class="b-faq__text-item">
+                        <div class="b-faq__heading">{faqHeading}</div>
+                    </div>
+                    <div class="b-faq__accordion-item">
+                        <Accordion client:load accordionItems={faqItems}/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
