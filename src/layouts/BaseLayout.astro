@@ -19,9 +19,12 @@ const { introTitle, introSubtitle } = Astro.props;
 		<title>Astro</title>
 	</head>
 	<body>
+		<a class="e-skip-nav" href="#main-content">
+			Skip to content
+		</a>
 		<div class="site__body">
             <Header/>
-            <main>
+            <main id="main-content">
                 <div class="b-intro">
 					<div class="b-intro__container">
 						<div class="b-intro__content">
