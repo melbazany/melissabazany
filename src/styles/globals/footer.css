@@ -1,53 +1,87 @@
+/* Footer Styles */
+.b-site__footer {}
+
+.b-site-footer__container {
+    @apply page-block__container;
+    @apply sm:mt-8;
+    @apply md:mt-16;
+}
+
+.b-site-footer__content {}
+
+.b-site-footer__inner {
+    @apply page-block__inner;
+}
+
+.b-site-footer__inner-content {}
 
 .b-site-footer-social-navigation {}
 
 .b-site-footer-social-navigation__list-label,
 .b-site-footer-social-navigation__sublist-label {
-    width: fit-content;
-    text-align: center;
-    margin-inline: auto;
+    @apply d5;
+    @apply text-[0.875rem];
+    @apply text-center;
 }
 
 .b-site-footer-social-navigation__list,
 .b-site-footer-social-navigation__sublist {
-    list-style-type: none;
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
+    @apply flex;
+    @apply list-none;
+    @apply justify-center;
 }
 
 .b-site-footer-social-navigation__list {
-    flex-flow: row wrap;
+    @apply sm:items-center;
+    @apply sm:justify-center;
+    @apply flex-wrap;
+    @apply sm:flex-nowrap;
+    @apply gap-4;
+    @apply sm:gap-20;
 }
 
 .b-site-footer-social-navigation__sublist {
+    @apply justify-center;
+    @apply gap-7;
 }
 
 .b-site-footer-social-navigation__list-item {}
+
 .b-site-footer-social-navigation__list-item--is-parent {
-    list-style-type: none;
-    display: flex;
-    gap: 0.5rem;
-    width: 100%;
+    @apply list-none;
+    @apply flex;
+    @apply gap-4;
+    @apply w-full;
+    @apply sm:w-fit;
+
 }
 
 .b-site-footer-social-navigation__list-item--is-parent {
-    flex-flow: column wrap;
+    @apply flex-col;
+    @apply flex-wrap;
 }
 
 .b-site-footer-social-navigation__link {
-    display: block;
-    width: fit-content;
-    line-height: 1;
-    padding: 0.25rem 0.5rem;
-    text-decoration: none;
+    @apply block;
+    @apply w-fit;
+    @apply leading-none;
+    @apply no-underline;
 
     svg {
-        height: 30px;
+        @apply transition-all;
+        @apply duration-300;
+        @apply translate-y-0;
+        height: 20px;
     }
 
     svg, svg * {
-        stroke: #000000;
-        fill: #000000;
+        stroke: black;
+        fill: black;
+    }
+
+    &:active, &:focus-visible, &:hover {
+        svg {
+            @apply -translate-y-1;
+        }
     }
 }
