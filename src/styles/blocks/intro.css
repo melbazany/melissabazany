@@ -1,0 +1,34 @@
+/* Intro section */
+.b-intro {}
+.b-intro__container {}
+.b-intro__content {}
+.b-intro__inner {
+    @apply page-block__inner;
+}
+
+.b-intro__inner-content {
+    @apply text-center;
+    @apply grid;
+    @apply gap-8;
+}
+
+.b-intro__text-content {
+    @apply grid;
+    @apply gap-4;
+}
+
+.b-intro__title {
+    @apply d1;
+}
+
+.b-intro__subtitle {
+    @apply d5;
+}
+
+.b-intro__profile-pic-item {
+    @apply picture-item;
+}
+
+.b-intro__profile-pic {
+    @apply picture;
+}
