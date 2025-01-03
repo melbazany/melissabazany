@@ -1,0 +1,106 @@
+/* Text and Image */
+.b-text-and-image {}
+
+.b-text-and-image__container {
+    @apply page-block__container;
+}
+
+.b-text-and-image__content {}
+
+.b-text-and-image__inner {
+    @apply page-block__inner;
+}
+
+.b-text-and-image__inner-content {
+    @apply grid;
+    @apply gap-6;
+
+    @screen sm {
+        @apply grid-cols-2;
+        @apply items-center;
+        @apply gap-12;
+    }
+}
+
+.b-text-and-image__inner-content--is-image-left {
+    @screen sm {
+        .b-text-and-image__image-item {
+            @apply order-1;
+        }
+
+        .b-text-and-image__text-item {
+            @apply order-2;
+        }
+    }
+}
+
+.b-text-and-image__inner-content--is-image-right {
+    @screen sm {
+        .b-text-and-image__image-item {
+            @apply order-2;
+        }
+
+        .b-text-and-image__text-item {
+            @apply order-1;
+        }
+    }
+}
+
+.b-text-and-image__image-item-content {
+    @apply picture-item;
+    @apply relative;
+    aspect-ratio: 0.67;
+
+    &:has(.b-text-and-image__icon-overlay) {
+        &::before {
+            @apply content-[''];
+            @apply z-[1];
+            @apply absolute;
+            @apply inset-0;
+            @apply h-full w-full;
+            @apply bg-black;
+            @apply opacity-25;
+        }
+    }
+}
+
+.b-text-and-image__image {
+    @apply picture;
+    @apply h-full w-full;
+    @apply absolute;
+    @apply inset-0;
+    @apply object-cover;
+}
+
+.b-text-and-image__icon-overlay {
+    @apply h-full w-full;
+    @apply absolute;
+    @apply inset-0;
+    @apply z-[2];
+    @apply object-contain;
+}
+
+.b-text-and-image__text-item {
+    @apply grid;
+    @apply gap-4;
+    @apply sm:h-fit;
+    @apply sm:py-12;
+    @apply sm:max-w-xl;
+    @apply sm:mx-auto;
+}
+
+.b-text-and-image__heading {
+    @apply d4;
+    @apply mb-1;
+    @apply sm:mb-2;
+    @apply md:mb-4;
+}
+
+.b-text-and-image__body-text {
+    @apply b1;
+    @apply sm:mb-8;
+}
+
+.b-text-and-image__call-to-action-link {
+    @apply button-link;
+}
