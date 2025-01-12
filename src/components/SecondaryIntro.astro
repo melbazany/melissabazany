@@ -25,7 +25,7 @@ const currentPath = Astro.url.pathname;
               {secondaryIntroBodyText != null && secondaryIntroBodyText.length > 0 ? (
                 <div class="b-secondary-intro__body-text">
                 {secondaryIntroBodyText.map(paragraph => (
-                    <p>{paragraph}</p>
+                    <p set:html={paragraph}></p>
                   ))}
               </div>
               ) : null}
