@@ -101,6 +101,13 @@
     @apply sm:mb-8;
 }
 
+.b-text-and-image__call-to-action-button-content {
+    @apply flex;
+    @apply flex-wrap;
+    @apply gap-4;
+    @apply items-center;
+}
+
 .b-text-and-image__call-to-action-link {
     @apply button-link;
 }
