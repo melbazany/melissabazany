@@ -49,6 +49,7 @@
     &:has(:nth-child(8)) {
         @screen sm {
             @apply columns-2;
+            @apply gap-12;
         }
     }
 }
