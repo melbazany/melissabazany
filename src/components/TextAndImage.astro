@@ -8,7 +8,10 @@ const {
     textAndImageBodyText,
     textAndImageCallToActionLinkText,
     textAndImageCallToActionLinkIsExternal,
-    textAndImageCallToActionLinkUrl
+    textAndImageCallToActionLinkUrl,
+    textAndImageCallToActionLinkTextTwo,
+    textAndImageCallToActionLinkIsExternalTwo,
+    textAndImageCallToActionLinkUrlTwo
 } = Astro.props;
 
 const imageOnClass = imageOn ? `b-text-and-image__inner-content--is-image-${imageOn}` : '';
@@ -27,10 +30,18 @@ const imageOnClass = imageOn ? `b-text-and-image__inner-content--is-image-${imag
               <div class="b-text-and-image__body-text">{textAndImageBodyText.map(paragraph => (
                 <p>{paragraph}</p>
               ))}</div>
-              <a
-              {...(textAndImageCallToActionLinkIsExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                class="b-text-and-image__call-to-action-link"
-                href={textAndImageCallToActionLinkUrl}>{textAndImageCallToActionLinkText}</a>
+              <div class="b-text-and-image__call-to-action-button-content">
+                <a
+                {...(textAndImageCallToActionLinkIsExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  class="b-text-and-image__call-to-action-link"
+                  href={textAndImageCallToActionLinkUrl}>{textAndImageCallToActionLinkText}</a>
+                { textAndImageCallToActionLinkUrlTwo &&
+                  <a
+                  {...(textAndImageCallToActionLinkIsExternalTwo ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    class="b-text-and-image__call-to-action-link"
+                    href={textAndImageCallToActionLinkUrlTwo}>{textAndImageCallToActionLinkTextTwo}</a>
+                }
+              </div>
             </div>
           </div>
         </div>
