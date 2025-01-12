@@ -12,8 +12,16 @@
 
 .b-jotform-contact-form__inner-content {}
 
+.b-jotform-contact-form__button-content {
+    @apply flex;
+    @apply flex-wrap;
+    @apply sm:flex-nowrap;
+    @apply gap-4;
+    @apply items-center;
+    @apply sm:justify-center;
+}
+
 .jotform-contact-form__button-link {
-    @apply mx-auto;
     @apply w-fit;
     @apply block;
     @apply button-link;
