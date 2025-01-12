@@ -43,7 +43,7 @@ export default {
                 fontWeight: '400',
             }],
             'd5': ['clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem)', {
-				lineHeight: '1',
+				lineHeight: '1.3',
                 letterSpacing: '0.12em',
                 fontWeight: '500',
             }],
