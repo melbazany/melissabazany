@@ -4,6 +4,13 @@
 /* Styles for the default global typography =======================================*/
 
 @layer base {
+
+  @property --offset {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 1px;
+  }
+
   :root {
     @apply text-[16px];
   }
@@ -96,36 +103,33 @@
   /* Links ======================= */
   a {
     &:not([class]) {
+      transition-timing-function: ease-in-out;
       @apply inline-block;
-      @apply relative;
-      @apply no-underline;
-      @apply px-[2px];
-      @apply delay-150;
-
-      &::after {
-        @apply absolute;
-        @apply content-[''];
-        @apply -z-10;
-        @apply bg-black;
-        @apply h-[1%];
-        @apply w-full;
-        @apply top-full;
-        @apply bottom-0;
-        @apply left-0;
-        @apply right-0;
-        @apply transition-all;
-        @apply ease-in-out;
-        @apply duration-300;
-      }
+      text-underline-offset: var(--offset, 1px);
+      text-decoration: underline;
+      text-decoration-color: black;
+      transition: --offset 300ms, text-decoration-color 300ms;
 
       &:active, &:focus-visible, &:hover {
-        @apply text-white;
+        --offset: 0.3125rem;
+        text-decoration-color: oklch(73.19% 0.1245 195.44);
+        text-decoration-thickness: 0.1875rem;
+      }
+    }
+  }
 
-        &::after {
-          @apply h-full;
-          @apply -top-0;
+  @supports not (background: paint(something)) {
+    a {
+      &:not([class]) {
+        transition: text-underline-offset 300ms, text-decoration-color 300ms;
+
+        &:active,
+        &:focus-visible,
+        &:hover {
+          text-underline-offset: 0.3125rem;
         }
       }
+
     }
   }
 
