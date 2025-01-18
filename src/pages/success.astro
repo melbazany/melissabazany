@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SecondaryIntro from '../components/SecondaryIntro.astro';
+
+const introTitle = "Success";
+const introSubtitle = "Thank you";
+
+const secondaryIntroHeading = "Form submitted! I'll be in touch shortly.";
+const secondaryIntroSubheading = [];
+const secondaryIntroBodyText = [];
+---
+<BaseLayout introTitle={introTitle} introSubtitle={introSubtitle}>
+  <SecondaryIntro
+    secondaryIntroHeading={secondaryIntroHeading}
+    secondaryIntroSubheading={secondaryIntroSubheading}
+    secondaryIntroBodyText={secondaryIntroBodyText}
+  />
+</BaseLayout>
