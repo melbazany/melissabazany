@@ -1,7 +1,11 @@
 @layer components {
     .page-block__container {
-        @apply py-6;
-        @apply md:py-8;
+        --page-block-padding-block: theme(size.6);
+        padding-block: var(--page-block-padding-block);
+
+        @screen md {
+            --page-block-padding-block: theme(size.8);
+        }
     }
 
     .page-block__inner {
