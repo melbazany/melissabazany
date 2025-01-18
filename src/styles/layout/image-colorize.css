@@ -4,7 +4,7 @@
         grid-template-areas: "stack";
         @apply mx-auto;
 
-        &:active, &:focus-visible, &:hover {
+        &.--is-in-view {
             [class*="--black-white"] {
                 @apply opacity-0;
                 @apply delay-300;
@@ -18,7 +18,7 @@
 
     .picture {
         @apply transition-opacity;
-        @apply duration-500;
+        @apply duration-[1200ms];
         @apply ease-linear;
 
         &[class*="--black-white"] {
