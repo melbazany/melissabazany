@@ -22,7 +22,7 @@ const { introTitle, introSubtitle } = Astro.props;
 		<a class="e-skip-nav" href="#main-content">
 			Skip to content
 		</a>
-		<div class="site__body">
+		<div class="site__body" id="c-scrolling-reveal">
             <Header/>
             <main id="main-content">
                 <div class="b-intro">
@@ -45,4 +45,15 @@ const { introTitle, introSubtitle } = Astro.props;
             <Footer/>
         </div>
 	</body>
+
+	<script>
+	import { ScrollingReveal } from "../scripts/ScrollingReveal";
+
+		window.addEventListener('load', () => {
+			if (document.querySelector("#c-scrolling-reveal")) {
+				ScrollingReveal();
+			}
+		})
+	</script>
+
 </html>
