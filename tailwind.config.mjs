@@ -14,12 +14,12 @@ export default {
         fontFamily: {
             'ivypresto-headline': ['ivypresto-headline', 'serif'],
             'questa-sans': ['questa-sans', 'sans-serif'],
-            'source-serif': ['source-serif', 'serif'],
+            'dm-sans': ['dm-sans', 'sans-serif'],
         },
 		fontSize: (theme) => ({
-            'b1': ['1.125rem', {
-                lineHeight: '1.2',
-                letterSpacing: '0',
+            'b1': ['1rem', {
+                lineHeight: '1.4',
+                letterSpacing: '-0.025rem',
                 fontWeight: '400',
             }],
             'd1': ['clamp(3.5rem, 1.6818rem + 6.2727vw, 7.5rem)', {
@@ -52,8 +52,16 @@ export default {
 				letterSpacing: '0',
 				fontWeight: '400',
 			}],
+			'formlabel': ['0.8125rem', {
+				lineHeight: '1.5',
+				letterSpacing: '0.05em',
+				fontWeight: '400',
+                textTransform: 'uppercase'
+			}],
         }),
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+        require('@tailwindcss/forms'),
+    ],
 }

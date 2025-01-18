@@ -50,7 +50,14 @@
   /* Body ========================================================================*/
   .b1 {
     @apply text-b1;
-    @apply font-source-serif;
+    @apply font-dm-sans;
+  }
+
+  /* Body ========================================================================*/
+  .formlabel {
+    @apply text-formlabel;
+    @apply font-questa-sans;
+    @apply uppercase;
   }
 
   /* Defaults =======================================================================*/
@@ -162,11 +169,6 @@
     --tw-ring-color: theme(colors.black);
   }
 
-  select,
-  input {
-    border: none !important;
-  }
-
   [type='text']:focus,
   input:where(:not([type])):focus,
   [type='email']:focus,
@@ -185,6 +187,5 @@
   select:focus {
     --tw-ring-color: theme(colors.black);
     --tw-ring-offset-color: theme(colors.black);
-    border: none;
   }
 }
