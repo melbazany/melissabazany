@@ -1,0 +1,85 @@
+<div class="b-contact-form">
+    <div class="b-contact-form__container">
+        <div class="b-contact-form__content">
+            <div class="b-contact-form__inner">
+                <div class="b-contact-form__inner-content">
+
+                    <div class="b-contact-form__button-content">
+                        <a class="b-contact-form__button-link" href="https://mbeemedia.pic-time.com/portfolio" target="_blank" rel="noopener noreferrer nofollow">View recent galleries</a>
+                    </div>
+
+                    <form name="contact" method="POST" data-netlify="true" action="/success" class="b-contact-form__form">
+                        <div class="b-contact-form__row">
+                            <div class="b-contact-form__item">
+                                <label class="b-contact-form__input-label">
+                                    <span class="b-contact-form__label-text">First Name</span>
+                                    <input type="text" name="firstName" required/>
+                                </label>
+                            </div>
+                            <div class="b-contact-form__item">
+                                <label class="b-contact-form__input-label">
+                                    <span class="b-contact-form__label-text">Last Name</span>
+                                    <input type="text" name="lastName" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="b-contact-form__row">
+                            <div class="b-contact-form__item">
+                                <label class="b-contact-form__input-label">
+                                    <span class="b-contact-form__label-text">Email</span>
+                                    <input type="email" name="email" required/>
+                                </label>
+                            </div>
+                            <div class="b-contact-form__item">
+                                <label class="b-contact-form__input-label">
+                                    <span class="b-contact-form__label-text">Phone</span>
+                                    <input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="b-contact-form__row">
+                            <div class="b-contact-form__item">
+                                <label class="b-contact-form__input-label">
+                                    <span class="b-contact-form__label-text">You're interested in</span>
+                                    <select name="role[]" required>
+                                        <option value="Wedding packages">Wedding packages</option>
+                                        <option value="Family photos">Family photos</option>
+                                        <option value="Senior photos">Senior photos</option>
+                                        <option value="Maternity photos">Maternity photos</option>
+                                        <option value="Something else">Something else</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="b-contact-form__item">
+                                <label class="b-contact-form__input-label">
+                                    <span class="b-contact-form__label-text">How'd you find me?</span>
+                                    <input type="text" name="discovered" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="b-contact-form__row">
+                            <div class="b-contact-form__item">
+                                <label class="b-contact-form__input-label">
+                                    <span class="b-contact-form__label-text">Message</span>
+                                    <textarea name="message"></textarea>
+                                </label>
+                                <div class="b-contact-form__label-help-text b-contact-form__label-help-text--is-subtext">
+                                    <div>Helpful details include:</div>
+                                    <ul>
+                                        <li>Date of your event</li>
+                                        <li>Location of your event</li>
+                                        <li>Preferred number of photographers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-contact-form__row">
+                            <button class="b-contact-form__button-link --is-submit-button" type="submit">Send</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

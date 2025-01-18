@@ -1,0 +1,28 @@
+.b-contact-form {}
+
+.b-contact-form__container {
+    @apply page-block__container;
+}
+
+.b-contact-form__content {}
+
+.b-contact-form__inner {
+    @apply page-block__inner;
+}
+
+.b-contact-form__inner-content {}
+
+.b-contact-form__button-content {
+    @apply flex;
+    @apply flex-wrap;
+    @apply sm:flex-nowrap;
+    @apply gap-4;
+    @apply items-center;
+    @apply sm:justify-center;
+}
+
+.b-contact-form__button-link {
+    @apply w-fit;
+    @apply block;
+    @apply button-link;
+}
