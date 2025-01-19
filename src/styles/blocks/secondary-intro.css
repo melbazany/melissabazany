@@ -21,10 +21,15 @@
     @apply grid;
     @apply gap-3;
 
+    &.--is-homepage {
+        @screen sm {
+            grid-template-areas:
+                "secondaryHeading secondaryHeading"
+                "subheading bodyText";
+        }
+    }
+
     @screen sm {
-        grid-template-areas:
-            "secondaryHeading secondaryHeading"
-            "subheading bodyText";
         @apply gap-x-10;
         @apply gap-y-8;
     }
@@ -44,10 +49,13 @@
     @apply block;
     @apply w-fit;
 
-    @screen sm{
+    @screen sm {
         @apply mx-auto;
         @apply text-center;
-        grid-area: secondaryHeading;
+
+        .--is-homepage & {
+            grid-area: secondaryHeading;
+        }
     }
 }
 
@@ -55,16 +63,20 @@
     @apply d3;
     @apply mb-3;
 
-    @screen md {
-        grid-area: subheading;
+    @screen sm {
+        .--is-homepage & {
+            grid-area: subheading;
+        }
     }
 }
 
 .b-secondary-intro__body-text {
     @apply b1;
 
-    @screen md {
-        grid-area: bodyText;
+    @screen sm {
+        .--is-homepage & {
+            grid-area: bodyText;
+        }
     }
 }
 
