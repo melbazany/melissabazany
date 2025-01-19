@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SecondaryIntro from '../components/SecondaryIntro.astro';
 import TextAndImage from '../components/TextAndImage.astro';
 
+const title = "Home";
 const introTitle = "Mel Bazany";
 const introSubtitle = "Web Developer, Photographer";
 
@@ -35,7 +36,7 @@ const secondTextAndImageCallToActionLinkIsExternal = true;
 const secondTextAndImageCallToActionLinkUrl = "https://www.mightyinthemidwest.com";
 
 ---
-<BaseLayout introTitle={introTitle} introSubtitle={introSubtitle}>
+<BaseLayout title={title} introTitle={introTitle} introSubtitle={introSubtitle}>
 
   <SecondaryIntro
     secondaryIntroHeading={secondaryIntroHeading}

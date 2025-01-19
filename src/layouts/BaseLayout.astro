@@ -6,7 +6,7 @@ import ProfilePic from '../components/ProfilePic.astro';
 
 import '../styles/app.css';
 
-const { introTitle, introSubtitle } = Astro.props;
+const { title, introTitle, introSubtitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -23,7 +23,7 @@ const { introTitle, introSubtitle } = Astro.props;
 		<link rel="stylesheet" href="https://use.typekit.net/jvo0miq.css">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{ title ? title : introTitle } | Mel Bazany</title>
 	</head>
 	<body>
 		<a class="e-skip-nav" href="#main-content">
