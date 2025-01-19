@@ -59,7 +59,11 @@ export default {
                 textTransform: 'uppercase'
 			}],
         }),
-		extend: {},
+		extend: {
+            colors: {
+                'myTeal': 'oklch(73.19% 0.1245 195.44)'
+            }
+        },
 	},
 	plugins: [
         require('@tailwindcss/forms'),

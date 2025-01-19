@@ -119,7 +119,7 @@
 
       &:active, &:focus-visible, &:hover {
         --offset: 0.3125rem;
-        text-decoration-color: oklch(73.19% 0.1245 195.44);
+        text-decoration-color: theme(colors.myTeal);
         text-decoration-thickness: 0.1875rem;
       }
     }
@@ -166,7 +166,7 @@
 
 @layer utilities {
   :root {
-    --tw-ring-color: theme(colors.black);
+    --tw-ring-color: theme(colors.myTeal);
   }
 
   [type='text']:focus,
@@ -184,8 +184,44 @@
   [type='week']:focus,
   [multiple]:focus,
   textarea:focus,
-  select:focus {
-    --tw-ring-color: theme(colors.black);
-    --tw-ring-offset-color: theme(colors.black);
+  select:focus,
+  a:focus,
+  [tabindex="0"]:focus,
+  button:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    --tw-ring-color: theme(colors.myTeal);
+    --tw-ring-offset-color: theme(colors.myTeal);
+    border-color: theme(colors.myTeal);
   }
+
+  [type='text']:focus-visible,
+  input:where(:not([type])):focus-visible,
+  [type='email']:focus-visible,
+  [type='url']:focus-visible,
+  [type='password']:focus-visible,
+  [type='number']:focus-visible,
+  [type='date']:focus-visible,
+  [type='datetime-local']:focus-visible,
+  [type='month']:focus-visible,
+  [type='search']:focus-visible,
+  [type='tel']:focus-visible,
+  [type='time']:focus-visible,
+  [type='week']:focus-visible,
+  [multiple]:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  a:focus-visible,
+  [tabindex="0"]:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline-color: theme(colors.myTeal);
+    outline-width: 2px;
+    outline-style: solid;
+    outline-offset: 0;
+  }
+
 }
