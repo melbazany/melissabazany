@@ -2,7 +2,8 @@
 const {
     secondaryIntroHeading,
     secondaryIntroSubheading,
-    secondaryIntroBodyText
+    secondaryIntroBodyText,
+    isHomepage,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
@@ -13,7 +14,7 @@ const currentPath = Astro.url.pathname;
       <div class="b-secondary-intro__content">
         <div class="b-secondary-intro__inner">
           <div class="b-secondary-intro__inner-content">
-            <div class="b-secondary-intro__text-content">
+            <div class={`b-secondary-intro__text-content ${isHomepage ? '--is-homepage' : ''}`}>
               <h2 class="b-secondary-intro__secondary-heading">
                 {secondaryIntroHeading}
               </h2>
